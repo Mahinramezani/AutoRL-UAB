@@ -1,4 +1,4 @@
-    if(!"pacman" %in% installed.packages()){
+if(!"pacman" %in% installed.packages()){
   install.packages("pacman")
 }
 
