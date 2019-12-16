@@ -28,6 +28,8 @@
   df_test_final <- df_test_raw %>% 
     add_feature_vector(df_ffreq_lookup, df_lfreq_lookup) 
   
+  df_test_final <- df_test_final[!duplicated(df_test_final$pair_id),]
+  
   df_test_final %>% 
     write_csv("./result/df_test_final.csv")
   
